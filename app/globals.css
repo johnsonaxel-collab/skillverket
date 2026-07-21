@@ -1,0 +1,237 @@
+@import "tailwindcss";
+
+/*
+  Skillverket — Axel Tuvemos brand applicerad.
+  Editoriell serif-look: cremevitt papper, nästan-svart bläck, EN accent —
+  den gula markörpennan (#fed835) som en penndragen överstrykning bakom nyckelord.
+  Typografi: Cormorant Garamond (display) + Karla (text/UI) + mono för SKILL.md.
+*/
+
+:root {
+  --paper: #f9f7ee;
+  --paper-2: #f1eede;
+  --ink: #0f0d0b;
+  --ink-soft: #46423a;
+  --muted: #8b857a;
+  --line: #e5e0d0;
+  --line-strong: #d7d1bf;
+  --surface: #fffdf5;
+  --manila: #efeada;
+  --manila-ink: #6a6252;
+
+  /* Den gula markören — brandens enda färg */
+  --accent: #fed835;
+  --accent-deep: #f2c500;
+  --accent-wash: #fdf1c2;
+
+  /* "cobalt"-tokens behålls som namn men pekar nu på bläck/gul-tvätt
+     (komponenterna refererar dem — färgen byts centralt här). */
+  --cobalt: #0f0d0b;
+  --cobalt-ink: #0f0d0b;
+  --cobalt-wash: #fdf1c2;
+
+  --danger: #b23b2e;
+  --shadow-card: 0 1px 0 var(--line), 0 14px 28px -22px rgba(15, 13, 11, 0.55);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #14120d;
+    --paper-2: #0e0c08;
+    --ink: #f6f3e9;
+    --ink-soft: #cbc5b5;
+    --muted: #928c7d;
+    --line: #2c2820;
+    --line-strong: #3a352a;
+    --surface: #1b1811;
+    --manila: #322d1e;
+    --manila-ink: #d9cca7;
+
+    --accent: #fed835;
+    --accent-deep: #f2c500;
+    --accent-wash: #34301a;
+
+    --cobalt: #f6f3e9;
+    --cobalt-ink: #ffffff;
+    --cobalt-wash: #34301a;
+
+    --danger: #e8776b;
+    --shadow-card: 0 1px 0 rgba(0, 0, 0, 0.4), 0 18px 32px -22px rgba(0, 0, 0, 0.85);
+  }
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-surface: var(--surface);
+  --color-manila: var(--manila);
+  --color-manila-ink: var(--manila-ink);
+  --color-accent: var(--accent);
+  --color-accent-wash: var(--accent-wash);
+  --color-cobalt: var(--cobalt);
+  --color-cobalt-ink: var(--cobalt-ink);
+  --color-cobalt-wash: var(--cobalt-wash);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-karla);
+  --font-display: var(--font-cormorant);
+  --font-mono: var(--font-space-mono);
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+/* Subtil pappersstruktur */
+.paper-grid {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 100% 2.1rem, 2.1rem 100%;
+  background-position: 0 -1px, -1px 0;
+  opacity: 0.5;
+}
+
+/* Signatur: den gula markörpennan bakom text (samma penndrag som axeltuvemo.com) */
+.marker {
+  background-image: linear-gradient(
+    104deg,
+    transparent 0.4%,
+    var(--accent) 1.2%,
+    var(--accent) 98.8%,
+    transparent 99.6%
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 62%;
+  background-position: 0 82%;
+  color: #0f0d0b;
+  padding: 0 0.06em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Markörsvep — samma gula penna, men "dras" fram vänster→höger när kortet skrivit klart */
+.sweep {
+  background-image: linear-gradient(
+    104deg,
+    transparent 0.4%,
+    var(--accent) 1.2%,
+    var(--accent) 98.8%,
+    transparent 99.6%
+  );
+  background-repeat: no-repeat;
+  background-size: 0% 62%;
+  background-position: 0 82%;
+  color: #0f0d0b;
+  transition: background-size 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.12s;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.sweep-on {
+  background-size: 100% 62%;
+}
+
+/* Blinkande skrivmarkör i self-writing-kortet */
+.caret {
+  display: inline-block;
+  width: 0.5ch;
+  transform: translateY(0.12em);
+  background: var(--ink);
+  animation: caret-blink 1.05s steps(1, end) infinite;
+}
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Katalognummer — mono-chip i katalogstil */
+.call-number {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+  color: var(--manila-ink);
+  background: var(--manila);
+  border: 1px solid var(--line-strong);
+  border-radius: 3px;
+  padding: 0.15rem 0.45rem;
+  display: inline-block;
+  line-height: 1.2;
+}
+
+/* Eyebrow — Karla, gles versal (ingen mono längre, mer editoriellt) */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Knappar — editoriell: fylld bläckknapp + hårfin spökknapp */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 7px;
+  padding: 0.62rem 1.1rem;
+  transition: transform 0.12s ease, background-color 0.15s ease,
+    border-color 0.15s ease, color 0.15s ease;
+  cursor: pointer;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+.btn-primary:hover {
+  background: color-mix(in srgb, var(--ink) 82%, var(--muted));
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+}
+.btn-ghost:hover {
+  background: var(--paper-2);
+  border-color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
