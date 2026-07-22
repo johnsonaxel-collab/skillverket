@@ -4,7 +4,8 @@ export type Category =
   | "PR & Kris"
   | "SEO"
   | "Analys & Data"
-  | "Metoder";
+  | "Metoder"
+  | "Performance";
 
 export interface Skill {
   slug: string;
@@ -25,6 +26,7 @@ export const CATEGORIES: Category[] = [
   "SEO",
   "Analys & Data",
   "Metoder",
+  "Performance",
 ];
 
 /** Manila-chip-färgkod per kategori (kodar kategorin i katalognumret). */
@@ -38,6 +40,7 @@ export const CATEGORY_META: Record<
   SEO: { code: "SEO", blurb: "Bli hittad av rätt personer." },
   "Analys & Data": { code: "DAT", blurb: "Vet om det funkade." },
   Metoder: { code: "MET", blurb: "Applicera en tänkares ramverk." },
+  Performance: { code: "PRF", blurb: "Aktivering som faktiskt konverterar." },
 };
 
 export const skills: Skill[] = [
@@ -1008,6 +1011,265 @@ den klassiska processen, där varje del hänger ihop med nästa.
 ## Leverans
 En strukturerad marknadsplan: situationsanalys → STP → marknadsmix (4 eller 7 P) →
 genomförande → uppföljning, med kundvärdet som röd tråd och tydliga mål att mäta mot.`,
+  },
+  {
+    slug: "cialdini-overtygelse",
+    callNumber: "MET·05",
+    title: "Cialdini",
+    category: "Metoder",
+    summary:
+      "Gör budskapet mer övertygande med Robert Cialdinis sju principer för påverkan — etiskt, med rätt princip på rätt plats.",
+    tags: ["övertygelse", "påverkan", "psykologi", "social proof"],
+    skillMarkdown: `---
+name: cialdini-overtygelse
+description: Använd när du vill göra ett budskap, en kampanj eller en text mer övertygande med Robert Cialdinis principer för påverkan (Influence). Triggas av "Cialdini", "övertygande", "påverkan", "psykologi i marknadsföring", "få folk att agera", "social proof", "knapphet".
+---
+
+# Cialdini — övertygelse
+
+Du tillämpar Robert Cialdinis principer för påverkan: de mönster som får människor att säga ja.
+Din uppgift är att göra ett budskap mer övertygande — etiskt, aldrig manipulativt — genom att
+aktivera rätt princip vid rätt tillfälle.
+
+> Detta tillämpar principerna i Robert Cialdinis "Influence". Ett ramverk, inte ett uttalande
+> från honom.
+
+## De sju principerna
+- **Ömsesidighet:** ge något av värde först, så vill folk ge tillbaka.
+- **Engagemang & konsekvens:** små ja leder till större ja — få folk att ta ett litet steg.
+- **Socialt bevis:** vi gör som andra likt oss gör — visa att andra valt er.
+- **Auktoritet:** trovärdiga experter och bevis övertygar — visa kompetens, inte skryt.
+- **Gillande:** vi säger ja till dem vi gillar — likhet, uppriktiga komplimanger, samarbete.
+- **Knapphet:** vi värderar det sällsynta eller tidsbegränsade — men bara om det är sant.
+- **Enhet:** delad identitet ("vi") är starkare än bara likhet.
+
+## Arbetsgång
+1. Vad ska mottagaren göra, och vad hindrar dem idag?
+2. Välj de 1–2 principer som passar situationen bäst (fler är inte bättre — det blir plottrigt).
+3. Bygg in dem konkret i budskapet/flödet, med äkta underlag.
+4. Etik-koll: varje princip måste vila på något SANT. Falsk knapphet eller påhittade omdömen
+   funkar en gång och förstör förtroendet för alltid.
+
+## Så utmanar du
+- "Vi skriver 'Bara 2 kvar!'" → "Är det sant? Annars nej — det bränner förtroendet."
+- "Vi listar alla fördelar" → "Vilken princip driver just den här handlingen? Fokusera."
+
+## Leverans
+Ett skarpare budskap med 1–2 principer inbyggda, en rad om varför de valdes, och en etik-koll
+att allt vilar på sanning.`,
+  },
+  {
+    slug: "dunford-positionering",
+    callNumber: "MET·06",
+    title: "Dunford-positionering",
+    category: "Metoder",
+    summary:
+      "Positionerar produkten med April Dunfords metod (Obviously Awesome): rätt konkurrensram, unika egenskaper, värde och kategori.",
+    tags: ["positionering", "B2B", "kategori", "produkt"],
+    skillMarkdown: `---
+name: dunford-positionering
+description: Använd när du vill positionera en produkt (särskilt B2B/tech) med April Dunfords metod från "Obviously Awesome" — kontext, konkurrensalternativ, unika egenskaper och värde. Triggas av "April Dunford", "Obviously Awesome", "positionera produkten", "B2B-positionering", "vad är vi egentligen".
+---
+
+# Dunford — positionering
+
+Du tillämpar April Dunfords positioneringsmetod: att sätta produkten i den kontext där dess
+styrkor blir uppenbara. Positionering är inte en slogan — det är att välja rätt marknad och
+referensram så att kunden direkt fattar varför just ni är rätt.
+
+> Detta tillämpar metoden i April Dunfords "Obviously Awesome". Ett ramverk, inte ett uttalande
+> från henne.
+
+## Metoden (i ordning)
+1. **Konkurrensalternativen:** vad skulle kunden använda om ni inte fanns? (Inkl. ett kalkylark,
+   "göra inget".) Det avgör referensramen.
+2. **Unika egenskaper:** vad har ni som alternativen inte har? (Funktioner, kapabiliteter, fakta.)
+3. **Värde:** vilket konkret värde levererar de egenskaperna för kunden? (Egenskap → nytta.)
+4. **Vem bryr sig mest:** vilka kunder får störst värde? Det är ert bästa segment.
+5. **Marknadskategori:** vilken kategori sätter er i bästa ljus och gör värdet självklart? (Att
+   välja kategori är det mäktigaste — och mest underskattade — draget.)
+6. **(Ev.) Trend:** en relevant trend som gör er angelägna nu, utan att bli hype.
+
+## Princip
+Kunden förstår er genom en referensram. Väljer ni fel ram jämförs ni med fel saker och värdet
+försvinner. Rätt ram gör styrkorna uppenbara — "obviously awesome".
+
+## Så utmanar du
+- "Vi är bäst på allt" → "För vem, jämfört med vad? Positionering kräver ett val."
+- "Vi är i kategori X" → "Gör den kategorin ert värde självklart, eller döljer den det?"
+
+## Leverans
+En ifylld positionering: konkurrensalternativ → unika egenskaper → värde → bästa segment →
+vald kategori (+ ev. trend), med en mening om varför kategorin är rätt.`,
+  },
+  {
+    slug: "ogilvy-reklamhantverk",
+    callNumber: "MET·07",
+    title: "Ogilvy",
+    category: "Metoder",
+    summary:
+      "Skriver och skärper reklam enligt David Ogilvy: säljande rubriker, research, konkret nytta och respekt för läsaren.",
+    tags: ["reklam", "copy", "rubriker", "hantverk"],
+    skillMarkdown: `---
+name: ogilvy-reklamhantverk
+description: Använd när du vill skriva eller skärpa reklam och copy enligt David Ogilvys principer — säljande rubriker, research, konkret nytta, respekt för läsaren. Triggas av "Ogilvy", "reklam", "annons", "rubrik som säljer", "copy som fungerar", "long copy".
+---
+
+# Ogilvy — reklamhantverk
+
+Du tillämpar David Ogilvys hantverk: reklam som säljer, byggd på research och respekt för
+läsaren — aldrig på fyndighet för fyndighetens skull. "Om det inte säljer är det inte kreativt."
+
+> Detta tillämpar principerna från David Ogilvys arbete (bl.a. "Ogilvy on Advertising"). Ett
+> ramverk, inte ett uttalande från honom.
+
+## Principer
+- **Rubriken är 80 % av jobbet.** Den ska ge ett löfte eller en nyhet, gärna med varumärket och
+  en konkret fördel. Vaga eller "smarta" rubriker som ingen förstår slösar pengar.
+- **Research före penna.** Vad är produktens största fördel, för vem, och vad tror/vet kunden redan?
+- **Konkret slår fluffigt.** Fakta, siffror och specifika löften övertygar mer än superlativ.
+- **Skriv till en person, som en människa** — ett tydligt "du", inte "vi på företaget".
+- **Lång copy säljer** när ämnet motiverar det: ge alla skäl att köpa, inte färre.
+- **Respektera läsaren.** "The consumer is not a moron." Lura eller tråka aldrig ut henne.
+
+## Arbetsgång
+1. Ta reda på: största fördelen, målgruppen, deras nuläge och ett bevis.
+2. Skriv 5–10 rubriker (löfte/nyhet), välj den starkaste och motivera.
+3. Bygg brödtexten kring fördelen, med bevis och ett tydligt nästa steg.
+
+## Så utmanar du
+- "Rubriken är en ordvits" → "Förstår en stressad läsare löftet på en sekund? Annars gör om."
+- "Vi säger 'marknadsledande'" → "Bevis? Annars stryk det. Konkret slår påståenden."
+
+## Leverans
+5–10 rubrikförslag + en motiverad favorit, och en brödtext byggd på fördel + bevis + tydlig CTA.`,
+  },
+  {
+    slug: "google-ads-struktur",
+    callNumber: "PRF·01",
+    title: "Google Ads-struktur",
+    category: "Performance",
+    summary:
+      "Bygger en sökkampanj som går att styra: tajt kampanj- och annonsgruppsstruktur, matchningstyper och negativa sökord.",
+    tags: ["Google Ads", "SEM", "sökannonsering", "PPC"],
+    skillMarkdown: `---
+name: google-ads-struktur
+description: Använd när du ska sätta upp eller städa en Google Ads-sökkampanj — kampanjstruktur, annonsgrupper, matchningstyper, negativa sökord och annonser. Triggas av "Google Ads", "sökannonsering", "SEM", "kampanjstruktur", "annonsgrupper", "matchningstyper".
+---
+
+# Google Ads-kampanjstruktur
+
+Du hjälper till att bygga en sökkampanj som är lätt att styra och optimera. De flesta konton
+läcker pengar på strukturen — röriga annonsgrupper och breda matchningar utan negativa ord.
+
+> Verktyget avgör faktiska siffror (volym, CPC, konkurrens). Verifiera antaganden i Keyword
+> Planner / kontot. Hitta inte på bud eller volymer.
+
+## Fråga först
+- Vad är målet (leads, försäljning, samtal) och vad är en konvertering värd?
+- Vad säljs, till vem, och i vilket geografiskt område?
+- Finns konverteringsmätning på plats? (Utan den optimerar du blint.)
+
+## Struktur (enkel och tät)
+1. **Kampanj** per tema/mål/geografi/budget — inte allt i en.
+2. **Annonsgrupper** tajta: ett tema per grupp, så annons + sökord + landningssida hänger ihop.
+3. **Matchningstyper:** börja med fras/exakt för kontroll; bred matchning bara med tydliga
+   signaler och full mätning. Elda inte brett utan koll.
+4. **Negativa sökord:** lägg en startlista direkt (t.ex. "gratis", "jobb", irrelevanta termer)
+   och bygg på från sökordsrapporten varje vecka.
+5. **Annonser:** 2–3 responsiva sökannonser per grupp — sökordet + fördelen + tydlig CTA, matchade
+   mot rätt landningssida.
+6. **Tillägg (assets):** sitelinks, callouts m.m. — höjer CTR gratis.
+
+## Optimeringsloop
+Sökordsrapport → lägg negativa → pausa det som inte konverterar → skala det som gör det. Följ
+konverteringar/CPA, inte klick.
+
+## Leverans
+Förslag på kampanj- och annonsgruppsstruktur, matchningstyper, en startlista negativa sökord och
+annonsutkast — plus vad som måste mätas innan man skalar.`,
+  },
+  {
+    slug: "paid-social-brief",
+    callNumber: "PRF·02",
+    title: "Paid social-brief",
+    category: "Performance",
+    summary:
+      "Briefar betald social utifrån funneln och kreativet: mål per trattläge, målgrupper, kreativ testplan och rätt mätning.",
+    tags: ["paid social", "Meta Ads", "funnel", "kreativ"],
+    skillMarkdown: `---
+name: paid-social-brief
+description: Använd när du ska planera betald annonsering i sociala kanaler (Meta, Instagram, LinkedIn, TikTok) — målgrupp, funnel, kreativ testning och mätning. Triggas av "paid social", "Meta Ads", "Facebook-annonser", "LinkedIn Ads", "annonsera på Instagram/TikTok", "betald social".
+---
+
+# Paid social-brief
+
+Du bygger en brief för betald social som utgår från funneln och den kreativa idén — inte från
+"vi boostar ett inlägg". På social vinner eller förlorar kampanjen på **kreativet** och på att
+rätt budskap möter rätt trattläge.
+
+> Verktygen avgör räckvidd, CPM och resultat. Verifiera i annonshanteraren. Hitta inte på siffror.
+
+## Fråga först
+- Mål, och vad en konvertering är värd? Plattform(ar) och varför just de?
+- Vem ska nås, och var i tratten är de (kalla, varma, nära köp)?
+- Vilka kreativa tillgångar finns eller kan tas fram?
+
+## Bygg briefen
+1. **Funnel & mål per steg:**
+   - *Topp (kallt):* räckvidd/uppmärksamhet — bred målgrupp, scrollstoppande kreativ.
+   - *Mitten (varmt):* övervägande — retargeting av engagerade, bevis och nytta.
+   - *Botten:* konvertering — retargeting av besökare/varukorg, erbjudande + tydlig CTA.
+2. **Målgrupper:** bredare än du tror i toppen (algoritmen hittar folk); retargeting i botten.
+3. **Kreativ testning:** 3–5 varianter per vinkel, testa hook/öppningsbild först — den avgör mest.
+   Planera för att byta ut trötta kreativ ("creative fatigue").
+4. **Format:** anpassa till plattform (vertikal video, funkar utan ljud, native känsla).
+5. **Mätning:** ett primärt mål per kampanj; följ CPA/ROAS, inte gilla-markeringar.
+
+## Så utmanar du
+- "Vi boostar inlägget" → "Mot vilket mål, vilken målgrupp, vilket trattläge? Vi briefar det ordentligt."
+- "En kreativ räcker" → "Social bränner kreativ snabbt — planera för flera och för utbyte."
+
+## Leverans
+En brief: funnel med mål per steg, målgrupper, en kreativ testplan (vinklar + antal) och vad som mäts.`,
+  },
+  {
+    slug: "cro-granskning",
+    callNumber: "PRF·03",
+    title: "CRO-granskning",
+    category: "Performance",
+    summary:
+      "Granskar en landningssida för högre konvertering: tydligt löfte, minimal friktion, en handling — som testbara hypoteser.",
+    tags: ["CRO", "konvertering", "landningssida", "optimering"],
+    skillMarkdown: `---
+name: cro-granskning
+description: Använd när du vill höja konverteringsgraden på en landningssida eller sida — hitta friktion, otydliga budskap och svaga CTA:er. Triggas av "CRO", "konverteringsoptimering", "höja konvertering", "granska landningssida", "varför konverterar inte sidan".
+---
+
+# CRO-granskning av landningssida
+
+Du granskar en sida för att höja konverteringen: ett tydligt löfte, minimal friktion, en enda
+handling. Du jagar inte fler besökare — du får fler av de som redan kommer att agera.
+
+> Riktiga beslut bör bekräftas med data (analytics, heatmaps, test). Utan siffror är detta
+> kvalificerade hypoteser att testa, inte sanningar.
+
+## Fråga/ta in
+- Sidans URL eller innehåll, det önskade målet (en handling), och trafikkällan.
+- Finns data? (konverteringsgrad, var folk hoppar av, enhet.)
+
+## Granska mot dessa punkter
+1. **Löftet above the fold:** förstår besökaren på 5 sekunder vad det är, för vem och varför bry sig?
+2. **Ett tydligt mål:** en primär CTA, upprepad. Konkurrerande knappar/länkar som stjäl fokus?
+3. **Friktion:** för många fält i formuläret? Otydliga steg? Onödiga krav? Ta bort allt som inte behövs.
+4. **Bevis:** finns socialt bevis, siffror eller garanti nära beslutet — eller måste man lita blint?
+5. **Invändningar:** besvaras de 2–3 vanligaste tvivlen (pris, tid, risk) innan CTA:n?
+6. **Budskaps-matchning:** stämmer sidan med annonsen/länken de kom från? (Message match.)
+7. **Mobil & hastighet:** funkar allt på mobil, laddar det snabbt? Långsamt = tappade konverteringar.
+
+## Leverans
+En prioriterad lista med förbättringar (störst effekt först), formulerade som testbara hypoteser —
+och en påminnelse om att låta data, inte magkänsla, avgöra vinnaren.`,
   },
 ];
 
