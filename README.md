@@ -66,3 +66,7 @@ Nyckel skapas på https://platform.claude.com/.
 
 Byggd för Vercel: importera repot, sätt `ANTHROPIC_API_KEY` som environment variable,
 deploya. Utan nyckel fungerar allt utom skarp generering (som då kör demo-läge).
+
+## Licens
+
+MIT, se [LICENSE](LICENSE).
